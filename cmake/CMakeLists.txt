@@ -244,8 +244,14 @@ endif()
 # Library Setup
 # -----------------------------------------------------------------------------
 
-set(BOOST_INCLUDEDIR ${boost_dir})
+#set(BOOST_INCLUDEDIR ${boost_dir})
+#find_package(Boost REQUIRED)
+
+#2025.8.21 by tishige
+set(BOOST_ROOT "C:/libs/boost_1_89_0")
+set(BOOST_INCLUDEDIR "C:/libs/boost_1_89_0")
 find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
 set(SDL2_DIR ${sdl2_dir})
 find_package(SDL2 REQUIRED)
